@@ -1,0 +1,21 @@
+.header {
+  padding: 10px 0;
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.headerContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0 15px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 100%;
+  width: 100%;
+}
+
+.headerList__item {
+  margin-bottom: 5px;
+}
