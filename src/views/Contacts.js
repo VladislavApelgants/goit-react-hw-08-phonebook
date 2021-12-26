@@ -57,19 +57,21 @@ export default function Contacts() {
   return (
     <>
       <section className="phonebook">
-        <h1 className="title">Phonebook</h1>
+        <div className="container">
+          <h1 className="title">Phonebook</h1>
 
-        <Form onSubmit={formSubmit} />
-        <div className="contacts">
-          <h2 className="title">Contacts</h2>
-          <Filter value={filter} onChange={filt} />
-          <div className="containerOverflow">
-            {load && <p>Load...</p>}
-            {items.length !== 0 ? (
-              <ContactList data={getFiltered()} />
-            ) : (
-              <p>There is nothing here yet</p>
-            )}
+          <Form onSubmit={formSubmit} />
+          <div className="contacts">
+            <h2 className="title">Contacts</h2>
+            <Filter value={filter} onChange={filt} />
+            <div className="containerOverflow">
+              {load && <p>Load...</p>}
+              {items.length !== 0 ? (
+                <ContactList data={getFiltered()} />
+              ) : (
+                <p>There is nothing here yet</p>
+              )}
+            </div>
           </div>
         </div>
       </section>

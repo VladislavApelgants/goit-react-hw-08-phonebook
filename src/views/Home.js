@@ -1,7 +1,9 @@
 export default function Home() {
   return (
-    <>
-      <h1>Welcome to phonebook</h1>
-    </>
+    <section className="section-welcome">
+      <div className="container">
+        <h1>Welcome to phonebook</h1>
+      </div>
+    </section>
   );
 }

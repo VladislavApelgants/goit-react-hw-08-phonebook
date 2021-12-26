@@ -1,8 +1,9 @@
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
+import s from "./Filter.module.scss";
 
 export default function Filter({ value, onChange }) {
   return (
-    <label>
+    <label className={s.labelFilter}>
       Filter by name
       <input
         type="text"

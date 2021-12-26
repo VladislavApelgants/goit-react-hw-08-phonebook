@@ -16,6 +16,12 @@
   & + & {
     margin-top: 20px;
   }
+
+  transition: transform 300ms cubic-bezier(0.55, 0.085, 0.68, 0.53);
+
+  &:hover {
+    transform: scale(1.1);
+  }
 }
 
 .contact__number {
@@ -25,12 +31,14 @@
 .contact__button {
   position: absolute;
   right: 0;
-  top: 0;
+  top: 5px;
   display: flex;
   justify-content: center;
   align-items: center;
   border: none;
   background-color: transparent;
+  transition: transform 300ms cubic-bezier(0.55, 0.085, 0.68, 0.53);
+
   &:hover {
     transform: scale(1.1);
   }

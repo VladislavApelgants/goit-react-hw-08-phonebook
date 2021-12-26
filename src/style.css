@@ -25,6 +25,15 @@ h6 {
   padding: 0;
 }
 
+.section-welcome {
+  padding: 60px 0;
+  text-align: center;
+}
+.container {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .title {
   text-align: center;
   color: rgb(138, 43, 226);
@@ -50,4 +59,10 @@ h6 {
   width: 600px;
   margin-left: auto;
   margin-right: auto;
+}
+
+@media screen and (min-width: 1280px) {
+  .container {
+    max-width: 1080px;
+  }
 }

@@ -1,26 +1,26 @@
-import { useState } from 'react';
-import s from './Form.module.scss';
-import PropTypes from 'prop-types';
+import { useState } from "react";
+import s from "./Form.module.scss";
+import PropTypes from "prop-types";
 
 function Form({ onSubmit }) {
-  const [name, setName] = useState('');
-  const [number, setNumber] = useState('');
+  const [name, setName] = useState("");
+  const [number, setNumber] = useState("");
 
-  const inputChange = e => {
+  const inputChange = (e) => {
     const { name, value } = e.currentTarget;
     switch (name) {
-      case 'name':
+      case "name":
         setName(value);
         break;
-      case 'number':
+      case "number":
         setNumber(value);
         break;
       default:
-        console.log('Упс, при вводе что-то пошло не так');
+        console.log("Упс, при вводе что-то пошло не так");
     }
   };
 
-  const handleSubmit = e => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     const name = e.target.name.value;
     const phone = e.target.number.value;
@@ -29,13 +29,13 @@ function Form({ onSubmit }) {
   };
 
   function reset() {
-    setName('');
-    setNumber('');
+    setName("");
+    setNumber("");
   }
 
   return (
     <form onSubmit={handleSubmit} className={s.form}>
-      <label>
+      <label className={s.labelName}>
         <span>Name</span>
         <input
           type="text"
@@ -47,7 +47,7 @@ function Form({ onSubmit }) {
           onChange={inputChange}
         />
       </label>
-      <label>
+      <label className={s.labelNumber}>
         <span>Number</span>
         <input
           type="tel"
