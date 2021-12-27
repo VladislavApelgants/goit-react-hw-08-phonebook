@@ -35,14 +35,14 @@ export default function Register() {
   }
 
   return (
-    <>
-      <h1>Register</h1>
-      <form onSubmit={registerDataSubmit} autoComplete="off">
-        <label>
-          <span>name</span>
+    <div className="form-wrap">
+      <form onSubmit={registerDataSubmit} className="form" autoComplete="off">
+        <label className="form__label">
+          <span className="label-name">Name</span>
           <input
             type="text"
             name="name"
+            className="form__input"
             pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
             title="Имя может состоять только из букв, апострофа, тире и пробелов. Например Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan и т. п."
             required
@@ -50,11 +50,12 @@ export default function Register() {
             onChange={changeRegisterForm}
           />
         </label>
-        <label>
-          <span>email</span>
+        <label className="form__label">
+          <span className="label-name">Email</span>
           <input
             type="text"
             name="email"
+            className="form__input"
             pattern="^[a-zA-Zа-яА-Я]+(([-][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$+\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
             title="Email может состоять только из букв, тире . Например Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan и т. п."
             required
@@ -62,11 +63,12 @@ export default function Register() {
             onChange={changeRegisterForm}
           />
         </label>
-        <label>
-          <span>Password</span>
+        <label className="form__label">
+          <span className="label-name">Password</span>
           <input
             type="text"
             name="password"
+            className="form__input"
             pattern="^[a-zA-Zа-яА-Я]+(([-][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$+\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
             title="Пароль телефона должен состоять цифр и может содержать пробелы, тире, круглые скобки и может начинаться с +"
             required
@@ -74,8 +76,13 @@ export default function Register() {
             onChange={changeRegisterForm}
           />
         </label>
-        <button type="submit">Add contact</button>
+        <div class="form__wrap-btn">
+          <button type="submit" className="submit-form">
+            Add contact
+          </button>
+          <div class="circle angled"></div>
+        </div>
       </form>
-    </>
+    </div>
   );
 }
